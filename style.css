@@ -1,0 +1,58 @@
+
+#Response {
+  max-width: 800px;
+  min-width: 400px;
+  margin: auto;
+}
+#box {
+  margin: auto;
+  max-width: 50%;
+  border: 3px solid cornflowerblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  display: flex;
+}
+#imageholder {
+  margin: auto;
+  width: 60%;
+  padding: none;
+}
+select {
+  min-width: 24px;
+  margin-bottom: 10px;
+}
+img {
+  max-width: 2em;
+  height: auto;
+  display: block-inline;
+  padding: none;
+}
+textarea {
+  margin: 3px;
+}
+button {
+  float: right;
+  padding: 2px 2px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px darkgray;
+}
+button:hover {
+  background-color: blue;
+}
+button:active {
+  background-color: navy;
+  box-shadow: 0 3px gray;
+  transform: translateY(2px);
+}
+#submit {
+  border-radius: 10%;
+  font-size: 2em;
+}

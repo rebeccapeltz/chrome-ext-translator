@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Translator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script src="axios.js"></script> -->
+    <script src='responsivevoice.js'></script>
+    <script src="popup.js"></script>
+
+</head>
+
+<body>
+    <div id="Response">
+        <div id="translate">
+            <div id="box" class="row">
+                <form>
+
+                    <div id="input">
+                        <div>
+                            <select>
+                                <option value="en">English </option>
+                                <option value="es">Spanish </option>
+                            </select>
+                            <img id="from-text-speak" src="speaker.png">
+                        </div>
+                        <textarea id="from-text" placeholder="Type in something here" tabindex=1></textarea>
+
+                    </div>
+
+
+                    <div id="output">
+                        <div>
+                            <select>
+                                <option value="en">English </option>
+                                <option value="es">Spanish </option>
+                            </select>
+                            <img id="to-text-speak" src="speaker.png">
+                        </div>
+                        <textarea id="to-text" placeholder="Translation shows here" disabled> </textarea>
+                    </div>
+                    <button type="button" id="submit" tabindex=2>Translate!</button>
+                </form>
+            </div>
+        </div>
+        <p>Voice Translation from <a href="https://www.responsivevoice.org">Responsive Voice</a></p>
+        <p> <a href="https://code.responsivevoice.org/responsivevoice.js">code here</a></p>
+    </div>
+</body>
+
+</html>
