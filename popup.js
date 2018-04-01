@@ -24,24 +24,7 @@ document.addEventListener("DOMContentLoaded", event => {
         let fromText = document.getElementById("from-text").value;
         let langFromVal = document.getElementById("lang-from-select").value;
         let langToVal = document.getElementById("lang-to-select").value;
-        // axios
-        //     .get("https://translate.yandex.net/api/v1.5/tr.json/translate?", {
-        //         params: {
-        //             key: "trnsl.1.1.20180331T023954Z.fb19b766eeb0f17b.94b94b49cb3e1b4fd6be44e59b76e99d819bf342",
-        //             text: fromText,
-        //             lang: "en" + "-" + "es",
-        //             format: "plain"
-        //         }
-        //     })
-        //     .then(response => {
-        //         console.log(response.data.text[0]);
-        //         validateResponse(response);
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
-
-//////////
+       
   let key= encodeURIComponent("trnsl.1.1.20180331T023954Z.fb19b766eeb0f17b.94b94b49cb3e1b4fd6be44e59b76e99d819bf342");
   let text = encodeURIComponent(fromText);
   let langFrom = encodeURIComponent(langFromVal);
