@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", event => {
     document.getElementById("submit").addEventListener("click", function (event) {
         event.preventDefault();
         let fromText = document.getElementById("from-text").value;
+        let langFromVal = document.getElementById("lang-from-select").value;
+        let langToVal = document.getElementById("lang-to-select").value;
         // axios
         //     .get("https://translate.yandex.net/api/v1.5/tr.json/translate?", {
         //         params: {
@@ -42,7 +44,9 @@ document.addEventListener("DOMContentLoaded", event => {
 //////////
   let key= encodeURIComponent("trnsl.1.1.20180331T023954Z.fb19b766eeb0f17b.94b94b49cb3e1b4fd6be44e59b76e99d819bf342");
   let text = encodeURIComponent(fromText);
-  let lang = encodeURIComponent("en-es");
+  let langFrom = encodeURIComponent(langFromVal);
+  let langTo = encodeURIComponent(langToVal);
+  let lang = encodeURIComponent(`${langFrom}-${langTo}`);//encodeURIComponent("en-es");
   let format = encodeURIComponent("plain");
   fetch(
     `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${key}&text=${text}&lang=${lang}&format=${format}`
