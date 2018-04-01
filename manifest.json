@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Language Translator",
     "description": "This extension will translate langugage and provide pronunciation",
-    "version": "1.0",
+    "version": "1.2",
     "browser_action": {
         "default_icon": {
             "32": "translate.png"
