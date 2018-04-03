@@ -24,25 +24,25 @@ document.addEventListener("DOMContentLoaded", event => {
         let fromText = document.getElementById("from-text").value;
         let langFromVal = document.getElementById("lang-from-select").value;
         let langToVal = document.getElementById("lang-to-select").value;
-       
-  let key= encodeURIComponent("trnsl.1.1.20180331T023954Z.fb19b766eeb0f17b.94b94b49cb3e1b4fd6be44e59b76e99d819bf342");
-  let text = encodeURIComponent(fromText);
-  let langFrom = encodeURIComponent(langFromVal);
-  let langTo = encodeURIComponent(langToVal);
-  let lang = encodeURIComponent(`${langFrom}-${langTo}`);//encodeURIComponent("en-es");
-  let format = encodeURIComponent("plain");
-  fetch(
-    `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${key}&text=${text}&lang=${lang}&format=${format}`
-                )
-                .then(response => {
-                    //test for error
-                    response.json().then(function (data) {
-                        validateResponse(data);
-                    });
-                })
-                .catch(function (error) {
-                    console.log(error);
+
+        let key = encodeURIComponent("trnsl.1.1.20180331T023954Z.fb19b766eeb0f17b.94b94b49cb3e1b4fd6be44e59b76e99d819bf342");
+        let text = encodeURIComponent(fromText);
+        let langFrom = encodeURIComponent(langFromVal);
+        let langTo = encodeURIComponent(langToVal);
+        let lang = encodeURIComponent(`${langFrom}-${langTo}`); //encodeURIComponent("en-es");
+        let format = encodeURIComponent("plain");
+        fetch(
+                `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${key}&text=${text}&lang=${lang}&format=${format}`
+            )
+            .then(response => {
+                //test for error
+                response.json().then(function (data) {
+                    validateResponse(data);
                 });
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
 
     });
     document.getElementById("from-text-speak").addEventListener("click", function (event) {
